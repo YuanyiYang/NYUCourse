@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    {% autoescape true %}
+    <rss version="2.0">
+        <channel>
+            <title>RSS Resource</title>
+            <description>This is the rss feed for a stack overflow like forum</description>
+            <link>yyy-question.appspot.com/viewQuestion?qId={{question.key.urlsafe()}}</link>
+        <item>
+            <title>{{ question.title }}</title>
+            <author>{{ question.author }}</author>
+            <content>{{ question.content | safe }}</content>
+            <pubdate>{{ question.date }}</pubdate>
+            <vote> {{ question.vote }}</vote>
+            {% for answer in answers %}
+                <answer>
+                    <author>{{ answer.author }} </author>
+                    <content> {{ answer.content }} </content>
+                    <vote> {{ answer.vote }}</vote>
+                    <pubdate> {{ answer.date }} </pubdate>
+                </answer>
+            {% endfor %}
+        </item>
+        </channel>
+    </rss>
+    {% endautoescape %}

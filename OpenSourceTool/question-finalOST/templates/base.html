@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+    <head>
+        <title>Question BBS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/main.css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/vote.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        {% if user %}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.email()}} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/AskQuestionView">Ask a question</a></li>
+                        </ul>
+                        {% else %}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Anonymous <b class="caret"></b></a>
+                        {% endif %}             
+                    </li>
+                </ul>     
+                {% if user %}
+                     <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/upload">Upload Image</li>
+                    </ul>
+                {% endif %}          
+                <ul class="nav navbar-nav navbar-right">                    
+                    <li><a href="{{ url|safe }}">{{ url_linktext }}</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>    
+        </nav>
+        
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <p class="text-center"> Yuanyi Yang</p>
+        </footer>
+        <script src="bootstrap/js/jquery-1.10.2.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+    </body>
+</html>
+{% endautoescape %}

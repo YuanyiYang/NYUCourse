@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+        
+        {% if user %}
+        <h2>Edit</h2>
+        <form action="/edit" method="post">
+             <div class="form-group">
+                 <input type="hidden" name="type" value="{{ type }}">
+                 <input type="hidden" name="id" value="{{ editObj.key.urlsafe() }}">
+                 <input class="form-control" type="text" name="title" value="{{editObj.title}}"> 
+                 <br/>
+                 <textarea class="form-control" name="content" rows="10" cols="20">
+                    {{- editObj.content }}
+                 </textarea>
+                 {% if type=='question' %}
+                    <input type="text" name="tags" value="{{ tagsStr }}">
+                 {% endif %}
+
+                 <input class="btn" type="submit" value="Update">
+             </div>
+        </form>
+        {% else %}
+        <h1>Don't know how u get here.(Haha, cause you directly request this page) Please turn back.
+        {% endif %}
+        <a href="/">Home</a>
+        
+{% endblock %}

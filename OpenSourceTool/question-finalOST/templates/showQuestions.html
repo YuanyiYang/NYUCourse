@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div classs="col-lg-3">
+        </div>
+        <div classs="col-lg-6">
+            <h2>All Questions</h2>
+            <br/>
+            {% for q in questions %}
+            <hr>
+            <h4><a href="/viewQuestion?qId={{q.key.urlsafe()}}">{{ q.title }}</a></h4>
+            <p><span class="glyphicon glyphicon-time"></span> Post on {{ q.date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+             <p><span class="glyphicon glyphicon-time"></span> Last edit on {{ q.edit_date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+             <p>Asked by: {{ q.author}} </p>
+             {% if q.tags %}
+             <p>Tagged: {% for tag in q.tags %} 
+            <a href='/tags?tag={{tag}}'>#{{ tag }}</a> 
+            {% endfor %}</a>
+            {% endif %}
+            <!--
+            <a href="rss/qId={{q.key.urlsafe()}}">RSS</a>
+        -->
+             <p>Snippet:<br/> {{ q.preview | safe | truncate(500)}} </p>
+
+            {% endfor %}
+        </div>
+        <div classs="col-lg-3">
+        </div>
+    </div>
+</div>    
+{% if page!='' %}
+<a href="/?page={{ page }}">Order Question</a><br>
+{% else %}
+
+{% endif %}
+<a href="/">Home</a>
+
+{% endblock %}

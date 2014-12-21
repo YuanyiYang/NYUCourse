@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div classs="col-lg-3">
+    </div>
+    <div classs="col-lg-6">
+      <table>
+        <tr>
+          <td> 
+            {% if user %}
+            <a href="/vote?type=question&qId={{q.key.urlsafe()}}&result=up&user={{user.email()}}"></a>
+            <i class="glyphicon glyphicon-chevron-up" onclick="questionVote(true)"></i>
+            {{ q.vote }}
+            <!-- <a href="/vote?type=question&qId={{q.key.urlsafe()}}&result=down&user={{user.email()}}"></a> -->
+            <i class="glyphicon glyphicon-chevron-down" onclick="questionVote(false)"></i>
+            {% endif %}
+          </td>
+          {% if user %}
+          <form name="questionVoteForm" method='POST' action="/vote">
+            <input type="hidden" name="type" value="question">
+            <input type="hidden" name="qid" value="{{q.key.urlsafe()}}">
+            <input type="hidden" name="user" value="{{user.email()}}">
+          </form> 
+          {% endif %}
+          <td> <h4><a href="/viewQuestion?qId={{q.key.urlsafe()}}">{{ q.title }}</a></h4>
+            <p><span class="glyphicon glyphicon-time"></span> Post on {{ q.date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+            <p>Asked by: {{ q.author }} </p>
+            <p> {{ q.content | safe }} </p>
+          </td>
+        </tr>
+        <tr>
+          <td> 
+            {% if user %}
+            {% if user.email() == q.author %}
+            <a href="/editView?qId={{q.key.urlsafe()}}"><h4>Edit</h4></a>
+            {% endif %}
+            {% endif %}
+          </td>
+          <td>
+            {% if q.tags %}
+            Tagged:
+            {% for tag in q.tags %} 
+            <a href='/tags?tag={{tag}}'>#{{ tag }}</a> 
+            {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+      </table>
+
+      <hr>
+      {% for answer in answers %}
+
+      <table>
+        <tr>
+          <td> 
+            {% if user %}
+            <a href="/vote?type=answer&id={{answer.key.urlsafe()}}&result=up&qId={{q.key.urlsafe()}}&user={{user.email()}}"><i class="glyphicon glyphicon-chevron-up"></i> </a>
+            {{ answer.vote }}
+            <a href="/vote?type=answer&id={{answer.key.urlsafe()}}&result=down&qId={{q.key.urlsafe()}}&user={{user.email()}}"><i class="glyphicon glyphicon-chevron-down"></i></a>
+            {% endif %}
+          </td>
+          <td>  <h4>Answered By {{ answer.author }}</h4>
+            <p><span class="glyphicon glyphicon-time"></span> Post on {{ answer.date.strftime('%Y-%m-%d %H:%M:%S') }}</p> 
+            <p> {{ answer.content | safe }} </p>
+          </tr>
+        </table>
+        {% if user %}
+        {% if user.email() == answer.author %}
+        <a href="/editView?aId={{answer.key.urlsafe()}}"><h4>Edit</h4></a>
+        {% endif %}
+        {% endif %}
+        <hr>
+        {% endfor %}
+        <br/>
+        {% if user %} 
+        <form action="/answerQuestion" method="post">
+         <div class="form-group">
+           <label class="col-lg-2 control-label">What's your answer?</label> <br/>
+           <br/>
+           <textarea class="form-control" name="answerContent" rows="10" cols="20" placeholder="Answer Content"></textarea>
+           <input type="hidden" name="qId" value="{{ q.key.urlsafe() }}">
+           <input class="btn" type="submit" value="Answer Question">
+         </div>
+       </form>
+       {% else %}
+       <h3>Login to answer this question</h3>
+       {% endif %}
+     </div>
+     <div classs="col-lg-3">
+     </div>
+   </div>
+ </div>    
+ <a href="/">Home</a>
+
+ {% endblock %}

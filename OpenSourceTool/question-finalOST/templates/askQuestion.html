@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+        
+        {% if user %}
+        <h1> Ask a Question</h1>
+		<form action="/askQuestion" method="post">
+             <div class="form-group">
+                 <label class="col-sm-2 control-label">What's the question?</label> <br/>
+                 <input class="form-control" type="text" name="title" placeholder="Question Title"> 
+                 <br/>
+			     <textarea class="form-control" name="questionContent" rows="10" cols="20" placeholder="Question Content"></textarea>
+                 <input type="text" name="tags" placeholder="Please put your tags here and seperated by comma" size="50">
+                 <br/>
+			     <input class="btn" type="submit" value="Ask Question">
+             </div>
+		</form>
+        {% else %}
+        <h1>Don't know how u get here.(Haha, cause you directly request this page) Please turn back.
+        {% endif %}
+		<a href="/">Home</a>
+        
+{% endblock %}
