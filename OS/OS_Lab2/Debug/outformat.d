@@ -1,0 +1,1 @@
+outformat.d: ../outformat.c
