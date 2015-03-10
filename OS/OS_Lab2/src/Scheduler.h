@@ -174,6 +174,7 @@ public:
 				cur_process->remainCPUBurst = 0;
 				int next_event_at = cur_event->a_t + cur_event->i_o;
 				cur_process->ready_time = next_event_at; // since next state for block is ready, so we could compute the ready time for process
+				cur_process->dynamic_prio = cur_process->static_prio - 1;
 				next_event = new Event(next_event_at, cur_event->p_id,
 						cur_event->a_t, 0, 0, READY, cur_process); // the next event for this should be the READY event
 				cur_process = NULL;
@@ -210,8 +211,10 @@ public:
 					}
 					next_event->c_b = cur_event->c_b;
 				}
+
+				temp_process->dynamic_prio--;
+				//cout<<"prio" << temp_process->dynamic_prio<<endl;
 				add_to_events_queue(next_event);
-				cur_event->prio = temp_process->dynamic_prio;
 				break;
 			}
 			case PREEMPT: {
@@ -221,6 +224,7 @@ public:
 						- qt;
 				temp_process->ready_time = cur_event->a_t;
 				temp_process->remainCPUBurst = cur_event->c_b;
+				//cout<<"In PREEMPT, prio" << temp_process->dynamic_prio<<endl;
 				add_to_ready_queue(temp_process);
 				cur_process = NULL;
 				cur_event->rem = temp_process->remainingExeTime;
@@ -253,7 +257,6 @@ public:
 			cur_process = NULL;
 		}
 	}
-
 
 	void beginSchedule() {
 		prepareInitialEvents();

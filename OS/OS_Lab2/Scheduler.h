@@ -57,6 +57,7 @@ public:
 
 	virtual void add_to_ready_queue(Process *) = 0; // virtual function for different scheduler to implement
 	virtual Process * get_from_ready_queue() = 0; // virtual function for differnt scheduler to provide the next ready process
+	virtual bool is_ready_queue_empty() = 0;
 
 	vector<string> stringSplit(string str) {
 		vector<string> tokens;
@@ -152,13 +153,15 @@ public:
 						- cur_event->time_stamp;
 				cur_event->rem = cur_process->remainingExeTime;
 				// for now, it should be equal to the c_b in the current event
-				if ((cur_event->a_t - cur_event->time_stamp)
-						!= cur_event->c_b) {
-					cout << "For debug issue" << endl;
-				}
-				if (cur_process->index != cur_event->p_id) {
-					cout << "ERROR" << endl;
-				}
+				/*
+				 if ((cur_event->a_t - cur_event->time_stamp)
+				 != cur_event->c_b) {
+				 cout << "For debug issue" << endl;
+				 }
+				 if (cur_process->index != cur_event->p_id) {
+				 cout << "ERROR" << endl;
+				 }
+				 */
 				// update the system IO time
 				if (this->pro_IO_time < cur_event->a_t) {
 					this->sys_non_IO_time += cur_event->a_t - this->pro_IO_time;
@@ -168,9 +171,10 @@ public:
 					this->pro_IO_time = cur_event->a_t + cur_event->i_o;
 				}
 				cur_process->IOTime += cur_event->i_o; // add the total IO time
-
+				cur_process->remainCPUBurst = 0;
 				int next_event_at = cur_event->a_t + cur_event->i_o;
 				cur_process->ready_time = next_event_at; // since next state for block is ready, so we could compute the ready time for process
+				cur_process->dynamic_prio = cur_process->static_prio - 1;
 				next_event = new Event(next_event_at, cur_event->p_id,
 						cur_event->a_t, 0, 0, READY, cur_process); // the next event for this should be the READY event
 				cur_process = NULL;
@@ -184,8 +188,16 @@ public:
 				// whwn receive event, we know which process get picked by dispatcher
 				cur_process = temp_process;
 				if (cur_event->c_b > qt) {
-					// consider this further
-					// now let's focus in the FCFS
+					// In such case, it should fire an PREEMPT Event
+					int next_event_at = cur_event->a_t + qt;
+					next_event = new Event(next_event_at, cur_event->p_id,
+							cur_event->a_t, 0, 0, PREEMPT, cur_process);
+					// should consider fire an DONE
+					if (cur_process->remainingExeTime <= qt) {
+						next_event->trans = DONE;
+					} else {
+						next_event->c_b = cur_event->c_b - qt;
+					}
 				} else {
 					int next_event_at = cur_event->a_t + cur_event->c_b;
 					next_event = new Event(next_event_at, cur_event->p_id,
@@ -199,7 +211,23 @@ public:
 					}
 					next_event->c_b = cur_event->c_b;
 				}
+
+				temp_process->dynamic_prio--;
+				//cout<<"prio" << temp_process->dynamic_prio<<endl;
 				add_to_events_queue(next_event);
+				break;
+			}
+			case PREEMPT: {
+				// At Running State, it should fire the PREEMPT event properly
+				// in the PREEMPT event, we should fire a ready event next
+				temp_process->remainingExeTime = temp_process->remainingExeTime
+						- qt;
+				temp_process->ready_time = cur_event->a_t;
+				temp_process->remainCPUBurst = cur_event->c_b;
+				//cout<<"In PREEMPT, prio" << temp_process->dynamic_prio<<endl;
+				add_to_ready_queue(temp_process);
+				cur_process = NULL;
+				cur_event->rem = temp_process->remainingExeTime;
 				break;
 			}
 			}
@@ -207,19 +235,26 @@ public:
 			//cur_event->output();
 		}
 		Event * next_event;
-		if (cur_process == NULL && !ready_queue.empty()) {
+		//cout << "In base class, is Ready_Queue empty? " << is_ready_queue_empty() << endl;
+		if (cur_process == NULL && !is_ready_queue_empty()) {
 			cur_process = get_from_ready_queue();
+			//cout<<"Get Running Procee " << cur_process -> index << endl;
 			next_event = new Event(current_system_time, cur_process->index,
 					cur_process->ready_time, 0, 0, RUNNING, cur_process);
-			int burst = rand->next(cur_process->CB);
 			// due to preemption; the CPU burst has not been exhausted; no need to initialize a new one
-			// here we first assign a new one every time
+			int burst = 0;
+			if (cur_process->remainCPUBurst > 0) {
+				burst = cur_process->remainCPUBurst;
+			} else {
+				// otherwise assign a new one every time
+				burst = rand->next(cur_process->CB);
+			}
 			if (burst > cur_process->remainingExeTime) {
 				burst = cur_process->remainingExeTime;
 			}
 			next_event->c_b = burst;
 			add_to_events_queue(next_event);
-			//cur_process = NULL;
+			cur_process = NULL;
 		}
 	}
 
@@ -259,7 +294,7 @@ public:
 		} else if (schedulerType == RR) {
 			cout << "RR " << qt << endl;
 		} else {
-
+			cout << "PRIO " << qt << endl;
 		}
 
 		this->sys_non_IO_time += FTime - this->pro_IO_time;

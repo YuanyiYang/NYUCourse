@@ -24,6 +24,7 @@ public:
 	int c_b;   // CPU burst of the next event
 	int i_o;  // IO burst of the next event
 	int rem;  // since the copy constructor is a shallow copy, we store the rem from the process
+	int prio; // also shallow copy
 	Process * p;
 	Transition trans;
 
@@ -37,6 +38,7 @@ public:
 		this->trans = trans;
 		this->p = p;
 		this->rem = p->remainingExeTime;
+		this->prio = p->dynamic_prio;
 	}
 
 	void output() {
@@ -57,7 +59,7 @@ public:
 		case RUNNING: {
 			printf("%d %d %d: READY -> RUNNG cb=%d rem=%d prio=%d\n", a_t, p_id,
 					a_t - time_stamp, c_b, rem,
-					p->dynamic_prio);
+					prio);
 			break;
 		}
 		case CREATE: {
@@ -66,7 +68,7 @@ public:
 		}
 		case PREEMPT: {
 			printf("%d %d %d: RUNNG -> READY  cb=%d rem=%d prio=%d\n", a_t, p_id, a_t-time_stamp,
-					c_b, rem, p->dynamic_prio);
+					c_b, rem, prio);
 			break;
 		}
 		default:

@@ -16,6 +16,8 @@
 #include "FCFS_Scheduler.h"
 #include "LCFS_Scheduler.h"
 #include "SJF_Scheduler.h"
+#include "RR_Scheduler.h"
+#include "PRIO_Scheduler.h"
 
 using namespace std;
 
@@ -55,8 +57,16 @@ int main(int argc, char **argv) {
 		_sched = new SJF_Scheduler(argv[optind], _r);
 		break;
 	}
-	case 'R':{
-
+	case 'R': {
+		const char * tmp = &svalue[1];
+		int qt = atoi(tmp);
+		_sched = new RR_Scheduler(argv[optind], _r, qt);
+		break;
+	}
+	case 'P': {
+		const char * tmp = &svalue[1];
+		int qt = atoi(tmp);
+		_sched = new PRIO_Scheduler(argv[optind], _r, qt);
 		break;
 	}
 	default:

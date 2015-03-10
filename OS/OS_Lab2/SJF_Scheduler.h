@@ -26,15 +26,21 @@ public:
 
 	}
 
+	bool is_ready_queue_empty() {
+		return ready_queue.empty();
+	}
+
 	void add_to_ready_queue(Process * p) {
-		if(ready_queue.empty()){
+		p->dynamic_prio = p->static_prio - 1;
+		if (ready_queue.empty()) {
 			ready_queue.push_back(p);
-		}else{
+		} else {
 			list<Process*>::iterator iter = ready_queue.begin();
-			while(iter!=ready_queue.end()&&(*iter)->remainingExeTime<=p->remainingExeTime){
+			while (iter != ready_queue.end()
+					&& (*iter)->remainingExeTime <= p->remainingExeTime) {
 				++iter;
 			}
-			ready_queue.insert(iter,p);
+			ready_queue.insert(iter, p);
 		}
 	}
 
@@ -45,7 +51,5 @@ public:
 	}
 
 };
-
-
 
 #endif /* SJF_SCHEDULER_H_ */

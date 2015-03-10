@@ -28,28 +28,32 @@ public:
 
 	}
 
+	bool is_ready_queue_empty() {
+		return ready_queue.empty();
+	}
 	void add_to_ready_queue(Process * p) {
+		p->dynamic_prio = p->static_prio - 1;
 		ready_queue.push_back(p);
 		/*
-		if (ready_queue.size() == 0) {
-			ready_queue.push_back(p);
-			return;
-		} else {
-			//cout<<ready_queue.size()<<endl;
-			list<Process*>::iterator it = ready_queue.begin();
-			while (it != ready_queue.end() && p->ready_time > (*it)->ready_time) {
-				++it;
-			}
-			while (it != ready_queue.end() && (*it)->ready_time == p->ready_time) {
-				if (p->index > (*it)->index) {
-					it++;
-				}else{
-					break;
-				}
-			}
-			ready_queue.insert(it, p);
-		}
-		*/
+		 if (ready_queue.size() == 0) {
+		 ready_queue.push_back(p);
+		 return;
+		 } else {
+		 //cout<<ready_queue.size()<<endl;
+		 list<Process*>::iterator it = ready_queue.begin();
+		 while (it != ready_queue.end() && p->ready_time > (*it)->ready_time) {
+		 ++it;
+		 }
+		 while (it != ready_queue.end() && (*it)->ready_time == p->ready_time) {
+		 if (p->index > (*it)->index) {
+		 it++;
+		 }else{
+		 break;
+		 }
+		 }
+		 ready_queue.insert(it, p);
+		 }
+		 */
 	}
 
 	Process * get_from_ready_queue() {

@@ -29,6 +29,8 @@ public:
 
 	int index; // the number of the process in the file
 
+	int remainCPUBurst;
+
 	Process(int index, int AT, int TC, int CB, int IO) {
 		this->index = index;
 		this->AT = AT;
@@ -45,6 +47,7 @@ public:
 		turnaroundTime = 0;
 		IOTime = 0;
 		CPUWaitingTime = 0;
+		remainCPUBurst = 0;
 	}
 };
 

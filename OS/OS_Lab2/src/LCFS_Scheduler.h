@@ -31,6 +31,7 @@ public:
 	}
 
 	void add_to_ready_queue(Process * p) {
+		p->dynamic_prio = p->static_prio - 1;
 		ready_queue.push_back(p);
 		/*
 		 if (ready_queue.size() == 0) {
