@@ -1,14 +1,26 @@
 # NYU Courses 
 
-Some code from assignments done for various classes, including Programming Language, Open Source Tool... Just for fun.
+Some code from assignments for various classes, including Programming Language, Open Source Tool, Operating System... Just for fun.
+## Operating System
+### Memory Management Unit(MMU)
+This is to simulate the algorithm to find a victim when a page fault occurs. Algorithm consists of Aging, LRU, NRU, Clock, FIFO, Second Chance, Random.
+
+### Process Scheduler
+This is to simulate process dispatcher in CPU. Implement algorithm including FIFO, LIFO, SJF, Round-Robin and Priority Queue.
+
+### Two-Pass Linker
+This is to simulate a linker before loading a program. It need two passes over the code.
+
 
 ## Programming Language
 ### Scheme Interpreter
 ####Overview
 A mini-interpreter written in scheme, able to interpret itself. 
 ####Files
-<b>myInterpreter.scm</b>: supports syntaxes including: _define, if, cold, let, let*, letter, quote, apply, and, or_
+<b>myInterpreter.scm</b>: supports syntaxes including: _define, if, cold, let, let*, letrec, quote, apply, and, or_
+
 <b>library.scm</b>: contains implementation of non-primitive functions needed in the interpreter
+
 <b>test.scm</b>: sample input to test the interpreter
 ####Usage
 Use the following commands in scheme interpreter:
