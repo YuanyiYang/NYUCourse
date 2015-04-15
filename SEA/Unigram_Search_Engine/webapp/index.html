@@ -1,0 +1,174 @@
+<!doctype html>
+<html ng-app="searchApp">
+	<head>
+		<title>Search</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+		<style>
+#titleDiv { padding-top: 100px; padding-bottom: 30px; }
+#navDiv { padding-top: 30px; padding-bottom: 0px;}
+#textDiv { padding-bottom: 10px; }
+#submitDiv { padding-bottom: 10px; }
+.status { padding-top:10px; padding-bottom:5px; }
+.result-holder { padding-top:5px; padding-bottom:5px; }
+.result-row {
+	margin-bottom: 10px;
+}
+
+h4 {
+	margin-bottom: 2px;
+}
+
+fieldset {
+    border-radius: 1em;
+}
+
+
+label, input, button {
+    font-size: inherit;
+}
+
+input {
+	margin-left: 0px;
+    margin-right: 0;
+}
+input:focus {
+    outline: none;
+}
+button {
+	margin: 0;
+}
+button:active,
+button:focus {
+    outline: none;
+}
+
+.bs-callout {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+
+ul {
+	padding-left: 18px;
+}
+li {
+	margin-bottom: 3px;
+}
+.fade-in {
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+.fade-in.ng-enter {
+  opacity: 0;
+}
+.fade-in.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.fade-in.ng-leave {
+  display: none;
+  opacity: 0;
+}
+.fade-in.ng-leave.ng-leave-active {
+  display: none;
+  opacity: 0;
+}
+		</style>
+		<script data-require="lodash.js@2.4.1" data-semver="2.4.1" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script>
+		<script src="js/ui-bootstrap-tpls.js"></script>
+		<script src="js/lodash.underscore.js"></script>
+		<script src="js/core.js"></script>
+	</head>
+	<body ng-controller="mainController">
+		<div class="container-fluid" ng-if="!activeQuery">
+			<form ng-submit="search()">
+				<div id="titleDiv" class="row text-center">
+					<h1>MetaSearch</h1>
+				</div>
+				<div id="textDiv" class="row">
+					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+						<div class="input-group">
+							<input type="text" class="form-control" size="40" ng-model="formData.query">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="submit">Search</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="container-fluid" ng-if="activeQuery">
+			<div id="navDiv" class="row" style="padding-left: 3px; border-bottom: 0px black solid;">
+				<div class="col-lg-3 col-md-3" style="width: auto;">
+					<h1 style="margin-top: -6px; margin-bottom: 10px;">
+						MetaSearch
+					</h1>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-9 col-xs-11">
+					<form ng-submit="search()">
+						<div class="input-group" style="margin-bottom: 10px;">
+							<input type="text" class="form-control" size="40" ng-model="formData.query">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="submit">Search</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row" ng-if="errorText">
+				<div class="col-sm-6">
+					<p class="status bg-danger">{{ errorText }}</p>
+				</div>
+			</div>
+			<div class="row" ng-if="delay">
+				<div class="col-sm-6 text-center">
+					<p class="status bg-info">{{ totalItems }} results ({{ delay }} seconds)</p>
+				</div>
+			</div>
+			<div class="result-holder"></div>
+				<div class="result-row row" ng-repeat="result in results">
+					<div class="col-sm-6" ng-bind-html="result">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
