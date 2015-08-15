@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Search Engine for SEA</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
+
+    <!-- Latest compiled and minified CSS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- angularjs js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+
+    <!-- your app's js -->
+    <script>
+//        var searchEngine = angular.module('searchEngine', []);
+//        var url = "http://linserv2.cims.nyu.edu:25800/search";
+//
+//        searchEngine.controller('ResultsCtrl', ['$scope', '$http', function($scope, $http){
+//            $scope.num = 0;
+//            $scope.submit = function(){
+//                var whole_url = url + "?q=" + $scope.query;
+//                $http.get(whole_url).success(function(data){
+//                    $scope.num = data["numResults"]
+//                    $scope.results = data['results'];
+//                })
+//            }
+//        }]);
+    </script>
+
+    <script src="js/controllers.js"></script>
+
+
+</head>
+<body ng-app="searchEngine">
+<div ng-controller="ResultsCtrl" class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            Search: <input ng-model="query">
+            <button ng-click="submit()">Click</button>
+        </div>
+        <div class="col-md-10">
+            <span>Total Results: {{ num }}</span>
+            <ul>
+                <li ng-repeat="result in results">
+                    <span> Title : {{result.title}} </span><br/>
+                    <span> Url: {{result.url}} </span><br/>
+                    <span> DocId: {{result.docID}} </span><br/>
+                    <p>Snippet: {{result.snippet}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

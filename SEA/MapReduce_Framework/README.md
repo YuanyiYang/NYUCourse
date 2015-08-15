@@ -1,21 +1,21 @@
 # High-Level Overview
-The canonical \"word count\" example application.
+The canonical "word count" example application.
 ## Frameworks vs. Application
-This framework will be interface-compatible with Hadoop\'s streaming interface, so it\'ll be able to run many other MapReduce applications as well.
+This framework will be interface-compatible with Hadoop's streaming interface, so it'll be able to run many other MapReduce applications as well.
 ## Workers vs. Coordinator
 Workers are Tornado HTTP servers that can perform either reduce or map tasks. The coordinator is a command-line Python program that invokes the workers
 ## Partitioning Strategy
 Keys are assigned to reducers by hashing the key (modulo number of reducers).
 ## Life-Cycle of a Job
-The coordinator takes as input a mapper program, a reducer program, the job\'s working directory (used for input files as well as output files), and the number of reducers (N) to use.
+The coordinator takes as input a mapper program, a reducer program, the job's working directory (used for input files as well as output files), and the number of reducers (N) to use.
 
-First, the coordinator searches the working directory for files that match the pattern \"*.in\", such as 0.in, 1.in, etc. These files are inputs to the MapReduce application. For each of the M input files, a mapper task is run.
+First, the coordinator searches the working directory for files that match the pattern "*.in", such as 0.in, 1.in, etc. These files are inputs to the MapReduce application. For each of the M input files, a mapper task is run.
 
 Each mapper task takes as input a mapper program, an input file (such as 0.in), and the number of reducers (N) that will be used. The mapper task runs the mapper program against the input file, producing a list of key-value pairs, and then partitions the keys across the N reducers that will be run. This partitioning is performed by hashing the key (modulo N). This results in N lists of key-value pairs for each mapper task. These N lists are associated with a mapper task ID (unique to the mapper task) and stored in memory. Each mapper task returns its map task ID to the coordinator.
 
 When the mapper tasks finish, the coordinator starts the N reducer tasks.
 
-Each reducer task takes as input a reducer program, the map task IDs (M of them), the reducer\'s index (a value in the range [0 ... N-1]), and the job\'s working directory. The reducer first fetches its key-value pairs directly from each of the mappers. It then runs the reducer program against this input data, and writes the output to a file in the job\'s working directory (such as 0.out). The reducer\'s index (a value in the range [0 ... N-1]) is used to name the output file.
+Each reducer task takes as input a reducer program, the map task IDs (M of them), the reducer's index (a value in the range [0 ... N-1]), and the job's working directory. The reducer first fetches its key-value pairs directly from each of the mappers. It then runs the reducer program against this input data, and writes the output to a file in the job\'s working directory (such as 0.out). The reducer's index (a value in the range [0 ... N-1]) is used to name the output file.
 
 # Inventory
 In the module-level namespace, define the URLs of each of your workers. Each worker should use a separate process. Each worker should listen on a single port and should be able to handle any type of request (map or reduce).
@@ -81,7 +81,7 @@ GET /reduce?
 ### Response
 ```json
 {"status": "success"} 
-```json
+```
 
 ```python
 python workers.py

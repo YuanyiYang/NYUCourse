@@ -1,0 +1,24 @@
+---
+- hosts: tag_Role_frontend
+  name: frontend startup
+  sudo: True
+  tasks:   
+    - name: copy frontend.py
+      copy: src=frontend.py dest=/home/ubuntu mode=0777
+    - name: copy config.json
+      copy: src=config.json dest=/home/ubuntu mode=0644
+    - name: Async start the frontend.py
+      command: chdir=/home/ubuntu /usr/bin/python frontend.py 
+      async: 30
+      poll: 0
+#      register: out
+#    - debug: out
+- hosts: tag_Role_backend
+  name: backend startup
+  sudo: True
+  tasks:  
+    - copy: src=backend.py dest=/home/ubuntu mode=0777
+    - name: Async start the backend.py
+      command: chdir=/home/ubuntu/ /usr/bin/python backend.py
+      async: 30
+      poll: 0

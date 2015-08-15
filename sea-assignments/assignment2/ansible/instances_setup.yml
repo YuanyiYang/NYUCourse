@@ -1,0 +1,33 @@
+- name: setup backend instances
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    role: 'backend'
+  roles:
+    - backend
+
+- name: setup frontend instances
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    role: 'frontend'
+  roles:
+    - frontend
+
+- name: install tornado play
+  hosts: ec2hosts
+  sudo: True
+  roles:
+     - common
+     
+- name: prepare py script play
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  tasks:
+    - name: Execute config_freeze.py
+      command: chdir=./ ~/venv/bin/python config_freeze.py 
+
+

@@ -1,0 +1,4 @@
+---
+- apt: name=python-pip update_cache=yes
+- name: install tornado
+  pip: name=tornado

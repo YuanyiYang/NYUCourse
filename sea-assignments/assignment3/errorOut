@@ -1,0 +1,1236 @@
+Traceback (most recent call last):
+  File "offline_parse.py", line 94, in <module>
+    main()
+  File "offline_parse.py", line 76, in main
+    pickle.dump(docIndexes[i], open(file_name, "wb"))
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 1370, in dump
+    Pickler(file, protocol).dump(obj)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 224, in dump
+    self.save(obj)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 331, in save
+    self.save_reduce(obj=obj, *rv)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 419, in save_reduce
+    save(state)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 286, in save
+    f(self, obj) # Call unbound method with explicit self
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 649, in save_dict
+    self._batch_setitems(obj.iteritems())
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 663, in _batch_setitems
+    save(v)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/pickle.py", line 306, in save
+    rv = reduce(self.proto)
+  File "/home/yy1112/venv/lib/python2.7/copy_reg.py", line 70, in _reduce_ex
+    raise TypeError, "can't pickle %s objects" % base.__name__
+TypeError: can't pickle XMLParser objects

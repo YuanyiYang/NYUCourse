@@ -1,0 +1,13 @@
+---
+- hosts: tag_Role_frontend
+  name: stop old service _ frontend
+  tasks:
+     - command: pkill -f frontend
+       register: pkill_result
+       failed_when: pkill_result.rc != 0 and pkill_result.rc != 1
+- hosts: tag_Role_backend
+  name: stop old service _ backend
+  tasks:
+     - command: pkill -f backend
+       register: pkill_result
+       failed_when: pkill_result.rc != 0 and pkill_result.rc != 1

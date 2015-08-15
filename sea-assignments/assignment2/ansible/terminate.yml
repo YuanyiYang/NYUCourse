@@ -1,0 +1,15 @@
+---
+- name: pause and terminate all instances
+  hosts: localhost
+  connection: local
+  tasks:
+    - pause: minutes=10
+    - name: register instance data
+      ec2_instances:
+        region: 'us-east-1'
+      register: ec2all
+    - name: Terminate instances that were previously launched
+      ec2:
+        state: 'absent'
+        region: 'us-east-1'
+        instance_ids:  '{{ ec2all.instance_ids }}'

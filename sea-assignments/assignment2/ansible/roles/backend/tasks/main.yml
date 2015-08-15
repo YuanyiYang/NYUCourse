@@ -1,0 +1,26 @@
+---
+- name: Provision a set of backend instances
+  ec2: 
+      key_name: "{{ ansible_env.NET_ID }}" 
+      instance_type: t2.micro
+      region: us-east-1
+      group: sg-feb26b9a
+      image: ami-9eaa1cf6
+      instance_tags:
+          Name: "{{ ansible_env.NET_ID }} - {{ role }}"
+          Role: "{{ role }}"
+      vpc_subnet_id: subnet-243a8e7d
+      exact_count: 3
+      count_tag:
+          Name: "{{ ansible_env.NET_ID }} - {{ role }}"
+      assign_public_ip: yes
+      wait: yes
+  register: ec2
+
+- name: add new instances to host group
+  add_host: hostname={{ item.public_ip }} groupname=ec2hosts
+  with_items: ec2.instances
+
+- name: wait for SSH to come up
+  wait_for: host={{ item.public_dns_name }} port=22 delay=60 timeout=320 state=started
+  with_items: ec2.instances
